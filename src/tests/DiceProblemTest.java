@@ -1,4 +1,4 @@
-package problems.dice;
+package tests;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -8,6 +8,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+
+import problems.dice.DiceProblemOpt;
+import problems.dice.IDiceProblem;
 
 @RunWith(Parameterized.class)
 public class DiceProblemTest {
@@ -29,7 +32,7 @@ public class DiceProblemTest {
 	    return Arrays.asList(data);
 	  }
 	
-	@Test
+	@Test(timeout=5000)
 	public void testDiceProblem() {
 		diceProblem = new DiceProblemOpt();
 		diceProblem.setData(dice,faces,trays);
@@ -38,4 +41,6 @@ public class DiceProblemTest {
 		Assert.assertEquals("[dice:"+dice+",faces:"+faces+",trays:"+trays+"]: "
 							, expectedResult, result );
 	}
+	
+	
 }

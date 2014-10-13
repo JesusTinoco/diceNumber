@@ -1,4 +1,7 @@
-package problems.dice;
+package tests;
+
+import problems.dice.DiceProblemOpt;
+import problems.dice.IDiceProblem;
 
 public class Test {
 
@@ -6,7 +9,7 @@ public class Test {
 		// TODO Auto-generated method stub
 
 		IDiceProblem diceProblem = new DiceProblemOpt();
-		diceProblem.setData(1, 2, 2);	
+		diceProblem.setData(5, 10, 1);	
 		
 		long time_start, time_end;
 		time_start = System.currentTimeMillis();
